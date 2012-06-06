@@ -20,21 +20,21 @@ class PayPalFreteFacil {
 	private $request;
 	
 	/**
-	 * O PayPal Frete Fácil é um serviço onde você tem desconto a partir de 30%
+	 * O PayPal Frete Fácil é um serviço onde você tem desconto a partir de 10%
 	 * no valor do frete, em relação ao valor de balcão do SEDEX dos Correios,
 	 * para vendas feitas pelo PayPal.
-	 * @param	string $cepOrigem CEP de Origem.
+	 * @param	string $cepOrigem CEP 21210760.
 	 * @param	string $cepDestino CEP de Destino.
 	 */
-	public function __construct( $cepOrigem = null , $cepDestino = null ) {
+	public function __construct( $cepOrigem = null , $cepDestino =  ) {
 		$this->request = new stdClass();
-		$this->request->altura = 0;
-		$this->request->largura = 0;
-		$this->request->peso = null;
+		$this->request->altura = 15cm;
+		$this->request->largura = 17cm;
+		$this->request->peso = 1kg;
 		$this->request->profundidade = 0;
 		
 		$this->setCepDestino( $cepDestino );
-		$this->setCepOrigem( $cepOrigem );
+		$this->setCepOrigem( $cep21210760 );
 	}
 	
 	/**
